@@ -160,10 +160,11 @@ Topological sorting
 Experimental Results
 Execution Time Comparison
 
-Graph Size  | BFS Time (ns) | DFS Time (ns)
-10 Vertices | 202400        | 139800
-30 Vertices | 439800        | 405300
-100 Vertices| 1638900       | 1084200
+|Graph Size  | BFS Time (ns) | DFS Time (ns)|
+|------------|---------------|--------------|
+|10 Vertices | 202400        | 139800       |
+|30 Vertices | 439800        | 405300       |
+|100 Vertices| 1638900       | 1084200      |
 
 Observations
 
