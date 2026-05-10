@@ -39,8 +39,6 @@ Graphs of different sizes were tested:
 A vertex represents a node in the graph.
 
 Example:
-
-```text
 0
 1
 2
