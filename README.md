@@ -55,8 +55,11 @@ This means:
 Vertex 0 is connected to 1 and 2
 Vertex 1 is connected to 0 and 3
 Adjacency lists are memory efficient for sparse graphs.
+
 Classes Description
+
 Vertex.java
+
 <img width="1226" height="430" alt="image" src="https://github.com/user-attachments/assets/062469d4-df69-4ef3-955c-a505cfd8e863" />
 This class represents a graph vertex.
 Fields
@@ -67,6 +70,7 @@ getId()
 toString()
 
 Edge.java
+
 <img width="1207" height="535" alt="image" src="https://github.com/user-attachments/assets/1dd2f836-413d-4670-92a3-65f22200b85d" />
 
 This class represents an edge between vertices.
@@ -79,6 +83,7 @@ Getters
 toString()
 
 Graph.java
+
 <img width="1234" height="948" alt="image" src="https://github.com/user-attachments/assets/2a9dfcf3-e86c-4fb3-8ef1-74ae72814aa7" />
 <img width="994" height="861" alt="image" src="https://github.com/user-attachments/assets/cb7012eb-fefc-41db-907d-0b02a5a99fb8" />
 This class stores the graph using an adjacency list.
@@ -89,6 +94,7 @@ bfs()
 dfs()
 
 Experiment.java
+
 <img width="1105" height="1013" alt="image" src="https://github.com/user-attachments/assets/f6c62210-eaef-4906-9ed9-4687546d0d00" />
 
 This class runs performance tests for graphs of different sizes.
@@ -98,6 +104,7 @@ Measures execution time
 Compares BFS and DFS performance
 
 Main.java
+
 <img width="1015" height="865" alt="image" src="https://github.com/user-attachments/assets/cf4dab40-494e-4da9-b370-6703f94f57c8" />
 
 This is the main program.
