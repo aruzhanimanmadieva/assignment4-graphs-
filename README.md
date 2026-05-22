@@ -6,7 +6,44 @@
 - Assignment: Graph Traversal and Representation System
 
 ---
+## Bonus Task — Dijkstra Algorithm
 
+This bonus task extends the graph traversal project by implementing Dijkstra’s Algorithm.
+
+The graph was modified to support weighted edges. A new method dijkstra(int start) was added to calculate the shortest distance from a starting vertex to all other vertices.
+
+The implementation uses arrays and loops without a priority queue.
+## Screenshots:
+<img width="1839" height="598" alt="image" src="https://github.com/user-attachments/assets/36e4fa79-e28b-46f4-ba06-01f8e003e252" />
+
+<img width="1865" height="825" alt="image" src="https://github.com/user-attachments/assets/599b914e-09a5-4fb2-9d8e-b8c2bf0bea71" />
+
+<img width="1874" height="650" alt="image" src="https://github.com/user-attachments/assets/9368b80c-e8e3-4bf1-bb00-b722106ebca2" />
+
+
+
+Example Output:
+
+DIJKSTRA SHORTEST PATHS:
+To 0 = 0
+To 1 = 4
+To 2 = 2
+To 3 = 9
+
+Time Complexity:
+O(V²)
+
+Dijkstra’s Algorithm is used for finding shortest paths in weighted graphs.
+
+Difference Between BFS and Dijkstra:
+
+BFS finds shortest paths only in unweighted graphs, while Dijkstra works with weighted graphs.
+
+BFS traversal
+DFS traversal
+Performance analysis using execution time measurements
+
+The experiments showed that both algorithms have time complexity O(V + E).
 # Project Overview
 
 This project demonstrates graph representation and graph traversal algorithms in Java.
@@ -73,6 +110,10 @@ Edge.java
 
 <img width="1207" height="535" alt="image" src="https://github.com/user-attachments/assets/1dd2f836-413d-4670-92a3-65f22200b85d" />
 
+updated edge.java
+<img width="1219" height="562" alt="image" src="https://github.com/user-attachments/assets/423b1956-0b12-4ec2-829d-e737320ecc4b" />
+
+
 This class represents an edge between vertices.
 Fields
 source
@@ -86,6 +127,14 @@ Graph.java
 
 <img width="1234" height="948" alt="image" src="https://github.com/user-attachments/assets/2a9dfcf3-e86c-4fb3-8ef1-74ae72814aa7" />
 <img width="994" height="861" alt="image" src="https://github.com/user-attachments/assets/cb7012eb-fefc-41db-907d-0b02a5a99fb8" />
+
+updated graph.java
+<img width="1115" height="988" alt="image" src="https://github.com/user-attachments/assets/42de2a8b-353f-4ee1-baed-8bfe394c0944" />
+<img width="1084" height="979" alt="image" src="https://github.com/user-attachments/assets/11dfc55b-4198-4525-87cd-5114480efaca" />
+<img width="1165" height="927" alt="image" src="https://github.com/user-attachments/assets/b4023413-2f6c-43d4-96dd-a969193426ef" />
+
+
+
 This class stores the graph using an adjacency list.
 Main Methods
 addEdge()
@@ -106,6 +155,10 @@ Compares BFS and DFS performance
 Main.java
 
 <img width="1015" height="865" alt="image" src="https://github.com/user-attachments/assets/cf4dab40-494e-4da9-b370-6703f94f57c8" />
+
+
+<img width="1034" height="933" alt="image" src="https://github.com/user-attachments/assets/31c8a8de-0098-431a-bdcc-011e243ba7ef" />
+
 
 This is the main program.
 It:
@@ -245,41 +298,4 @@ Graph representation with adjacency lists
 
 
 
-## Bonus Task — Dijkstra Algorithm
 
-This bonus task extends the graph traversal project by implementing Dijkstra’s Algorithm.
-
-The graph was modified to support weighted edges. A new method dijkstra(int start) was added to calculate the shortest distance from a starting vertex to all other vertices.
-
-The implementation uses arrays and loops without a priority queue.
-## Screenshots:
-<img width="1839" height="598" alt="image" src="https://github.com/user-attachments/assets/36e4fa79-e28b-46f4-ba06-01f8e003e252" />
-
-<img width="1865" height="825" alt="image" src="https://github.com/user-attachments/assets/599b914e-09a5-4fb2-9d8e-b8c2bf0bea71" />
-
-<img width="1874" height="650" alt="image" src="https://github.com/user-attachments/assets/9368b80c-e8e3-4bf1-bb00-b722106ebca2" />
-
-
-
-Example Output:
-
-DIJKSTRA SHORTEST PATHS:
-To 0 = 0
-To 1 = 4
-To 2 = 2
-To 3 = 9
-
-Time Complexity:
-O(V²)
-
-Dijkstra’s Algorithm is used for finding shortest paths in weighted graphs.
-
-Difference Between BFS and Dijkstra:
-
-BFS finds shortest paths only in unweighted graphs, while Dijkstra works with weighted graphs.
-
-BFS traversal
-DFS traversal
-Performance analysis using execution time measurements
-
-The experiments showed that both algorithms have time complexity O(V + E).
