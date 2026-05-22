@@ -1,8 +1,14 @@
 import java.util.*;
 public class Graph {
     private Map<Integer, List <Integer>> adjacencyList;
+    //Matrix for weighted edges
+    private int[][] weights;
+
     public Graph(){
         adjacencyList=new HashMap<>();
+
+        //100 vertices
+        weights=new int[100][100];
     }
     // Add vertex
     public void addVertex(Vertex v){
@@ -13,6 +19,12 @@ public class Graph {
         adjacencyList.get(from).add(to);
         //Undirected graph
         adjacencyList.get(to).add(from);
+    }
+    //weighted edge for Dijkstra
+    public void addWeightedEdge(int from,int to,int weight){
+        addEdge(from,to);
+        weights[from][to]=weight;
+        weights[to][from]=weight;
     }
     //Print graph
     public void printGraph(){
@@ -57,6 +69,41 @@ public class Graph {
             if(!visited.contains(neighbor)){
                 dfsRecursive(neighbor,visited);
             }
+        }
+    }
+    //BONUS TASK-Dijkstra Algorithm
+    public void dijkstra(int start){
+        int size=adjacencyList.size();
+        int[] distance=new int[size];
+        boolean[] visited=new boolean[size];
+
+        Arrays.fill(distance,Integer.MAX_VALUE);
+        distance[start]=0;
+        for(int i=0;i<size-1;i++){
+            int minVertex=-1;
+            int minDistance=Integer.MAX_VALUE;
+
+            for(int j=0;j<size;j++){
+                if(!visited[j] && distance[j]<minDistance){
+                    minDistance=distance[j];
+                    minVertex=j;
+                }
+            }
+            visited[minVertex]=true;
+
+            for(int neighbor :adjacencyList.get(minVertex)){
+                if(!visited[neighbor] && weights[minVertex][neighbor]!=0
+                    && distance[minVertex] !=Integer.MAX_VALUE
+                    && distance[minVertex]+weights[minVertex][neighbor]<distance[neighbor]){
+
+                    distance[neighbor]=distance[minVertex]+weights[minVertex][neighbor];
+                }
+            }
+        }
+        //Results
+        System.out.println("\nDIJKSTRA SHORTEST PATHS:");
+        for(int i=0;i<size;i++){
+            System.out.println("To " + i + "=" + distance[i]);
         }
     }
 }

@@ -1,5 +1,5 @@
 public class Experiment {
-    // Run BFS and DFS
+    // Run BFS and DFS,and Dijkstra
     public void runTraversals(Graph g){
         long startBFS=System.nanoTime();
         g.bfs(0);
@@ -8,8 +8,14 @@ public class Experiment {
         long startDFS=System.nanoTime();
         g.dfs(0);
         long endDFS=System.nanoTime();
+
+        long startDijkstra=System.nanoTime();
+        g.dijkstra(0);
+        long endDijkstra=System.nanoTime();
+
         System.out.println("BFS Time: " + (endBFS-startBFS)+ " ns");
         System.out.println("DFS Time: " + (endDFS-startDFS)+ " ns");
+        System.out.println("Dijkstra Time: " + (endDijkstra-startDijkstra)+ " ns");
     }
     // Multiple graph tests
     public void runMultipleTests(){
@@ -21,10 +27,12 @@ public class Experiment {
             for(int i=0;i<size;i++){
                 graph.addVertex(new Vertex(i));
             }
-            // Add edges
-            for(int i=0; i<size-1;i++){
-                graph.addEdge(i,i+1);
+            //Add weighted edges
+            for(int i=0;i<size-1;i++){
+                int weight=(i%5)+1;
+                graph.addWeightedEdge(i,i+1,weight);
             }
+
             runTraversals(graph);
         }
     }
